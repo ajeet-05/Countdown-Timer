@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launching Soon</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LAUNCHING</h1>
+            <h1 class="soon">SOON</h1>
+        </div>
+
+        <div class="countdown">
+            <p class="label">Time left until launching</p>
+            <div class="timer">
+                <div class="time-block">
+                    <span class="number" id="days">00</span>
+                    <span class="unit">D</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="hours">16</span>
+                    <span class="unit">H</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="minutes">23</span>
+                    <span class="unit">M</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="seconds">48</span>
+                    <span class="unit">S</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe-section">
+            <div class="notify-wrapper">
+                <span class="notify-badge">GETNOTIFIED</span>
+                <span class="subscribe-badge">SUBSCRIBE</span>
+            </div>
+            <form id="subscribeForm" class="subscribe-form">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    placeholder="ENTER YOUR EMAIL" 
+                    required 
+                />
+                <button type="submit" id="subscribeBtn">SUBSCRIBE</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

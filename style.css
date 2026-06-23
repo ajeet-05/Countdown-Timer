@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+    background: #0a0c1a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-image: 
+        radial-gradient(ellipse at 50% 40%, #1a1f4a 0%, #0d1025 50%, #070915 100%);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(60, 80, 200, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 820px;
+    width: 100%;
+    background: transparent;
+    background: rgba(12, 16, 35, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 3rem;
+    padding: 3rem 2.5rem 3.5rem;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.9),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header {
+    margin-bottom: 2.2rem;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #f0f3ff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.header .soon {
+    color: #b7c9ff;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-top: -0.2rem;
+    text-shadow: 0 0 30px rgba(100, 150, 255, 0.2);
+}
+
+.countdown {
+    margin: 2rem 0 2.8rem;
+}
+
+.label {
+    color: #9aa9d9;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.number {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(4px);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-shadow: 0 0 30px rgba(100, 150, 255, 0.3);
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.unit {
+    color: #7e8fc7;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.subscribe-section {
+    margin-top: 1.2rem;
+}
+
+.notify-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.notify-badge,
+.subscribe-badge {
+    background: rgba(35, 42, 74, 0.8);
+    color: #d6e0ff;
+    padding: 0.5rem 1.6rem;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.subscribe-badge {
+    background: rgba(47, 56, 128, 0.9);
+    color: white;
+    border-color: rgba(78, 91, 191, 0.4);
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+}
+
+.subscribe-form input {
+    flex: 2 1 240px;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 60px;
+    background: rgba(26, 31, 58, 0.8);
+    color: #eef3ff;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    outline: 2px solid transparent;
+    transition: 0.2s;
+    min-width: 200px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.subscribe-form input::placeholder {
+    color: #5a6b9e;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.subscribe-form input:focus {
+    outline: 2px solid #5b72d6;
+    background: rgba(30, 36, 69, 0.9);
+}
+
+.subscribe-form button {
+    flex: 0 1 auto;
+    background: linear-gradient(135deg, #3f4fc9, #2f3fa8);
+    border: none;
+    padding: 1rem 2.6rem;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 6px 20px rgba(40, 60, 200, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
+}
+
+.subscribe-form button:hover {
+    background: linear-gradient(135deg, #5b70f0, #4a5fd8);
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(50, 80, 255, 0.5);
+}
+
+.subscribe-form button:active {
+    transform: scale(0.97);
+}
+
+.message {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #b3c6ff;
+    min-height: 2rem;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.2rem 2.5rem;
+        border-radius: 2.2rem;
+    }
+    .header h1 {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+    .header .soon {
+        font-size: 2.6rem;
+        letter-spacing: 6px;
+    }
+    .number {
+        font-size: 3.2rem;
+        padding: 0.1rem 0.2rem;
+    }
+    .timer {
+        gap: 1.2rem;
+    }
+    .time-block {
+        min-width: 55px;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .subscribe-form input {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    .subscribe-form button {
+        width: 100%;
+        padding: 1rem;
+    }
+    .notify-wrapper {
+        gap: 1rem;
+    }
+    .notify-badge,
+    .subscribe-badge {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    .header .soon {
+        font-size: 2rem;
+    }
+    .number {
+        font-size: 2.6rem;
+    }
+    .timer {
+        gap: 0.8rem;
+    }
+    .time-block {
+        min-width: 44px;
+    }
+}
